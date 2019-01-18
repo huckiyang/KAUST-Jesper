@@ -122,7 +122,7 @@ Original author is [Magnus Erik Hvass Pedersen](http://www.hvass-labs.org)
 ([Notebook](https://github.com/Hvass-Labs/TensorFlow-Tutorials/blob/master/23_Time-Series-Prediction.ipynb))
 ([Google Colab](https://colab.research.google.com/github/Hvass-Labs/TensorFlow-Tutorials/blob/master/23_Time-Series-Prediction.ipynb))
 
-## 100 days Machine Learning
+## Good Ref. [2] 100 days Machine Learning
 
 100 Days of Machine Learning Coding as proposed by [Siraj Raval](https://github.com/llSourcell)
 
