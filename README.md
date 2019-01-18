@@ -3,6 +3,8 @@ this is a training guide trail for Jesper Tegner's Group at KAUST.
 
 C.-H. Huck Yang, Dec 2017
 
+https://livingsystems.kaust.edu.sa/Pages/Home.aspx
+
 ## Good Ref. [1] TensorFlow Tutorials
 
 [Original repository on GitHub](https://github.com/Hvass-Labs/TensorFlow-Tutorials)
