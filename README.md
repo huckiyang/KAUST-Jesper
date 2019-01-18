@@ -1,6 +1,7 @@
 # KAUST_Jesper_Keras_ML_LabTraining
 this is a training guide trail for Jesper's Group at KASUT. 
-C.-H. Huck Yang
+
+C.-H. Huck Yang, Dec 2017
 
 ## Good Ref. [1] TensorFlow Tutorials
 
