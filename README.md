@@ -1,7 +1,7 @@
 # KAUST_Jesper_Keras_ML_LabTraining
 this is a training guide trail for Jesper Tegner's Group at KAUST. 
 
-C.-H. Huck Yang, Dec 2017
+C.-H. Huck Yang and Jesper Tegner Dec 2017
 
 https://livingsystems.kaust.edu.sa/Pages/Home.aspx
 
