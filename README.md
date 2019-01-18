@@ -1,5 +1,5 @@
 # KAUST_Jesper_Keras_ML_LabTraining
-this is a training guide trail for Jesper Tegner's Group at KASUT. 
+this is a training guide trail for Jesper Tegner's Group at KAUST. 
 
 C.-H. Huck Yang, Dec 2017
 
