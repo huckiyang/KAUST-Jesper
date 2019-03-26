@@ -5,6 +5,106 @@ C.-H. Huck Yang and Jesper Tegner Dec 2017
 
 https://livingsystems.kaust.edu.sa/Pages/Home.aspx
 
+* # Before NVIDIA Driver Installation
+
+    * Disable the Nouveau Drivers
+    
+        ``` sudo vim /etc/modprobe.d/blacklist-nouveau.conf ```
+    
+    * Add the following two lines to the file
+    
+        ``` blacklist nouveau ```
+        
+        ``` options nouveau modeset=0 ```
+     
+    * Regenerate the kernel initramfs
+    
+        ``` sudo update-initramfs -u ```
+        
+    * Reboot
+    
+        ``` reboot ```
+
+* # NVIDIA Driver Installation
+
+    * Version: 415 or 410
+    
+    * Link: https://www.nvidia.com/Download/index.aspx
+    
+    * Installation instructions
+
+        ``` chmod +x NVIDIA-Linux-x86_64-410.78.run ```
+
+        ``` sudo ./NVIDIA-Linux-x86_64-410.78.run ```
+        
+    * Reboot
+    
+        ``` reboot ```
+        
+    * Test if driver is successfully installed, run:
+    
+        ``` nvidia-smi ```
+        
+        ``` nvidia-settings ```
+        
+        If there are some troubles, remove the driver, and run the installer:
+        
+        ``` sudo apt-get remove --purge nvidia* ```
+        
+        ``` sudo ./NVIDIA-Linux-x86_64-410.78.run --no-opengl-files ```
+        
+* # CUDA
+    
+    * Version: CUDA 10.0
+    
+    * Cuda link: https://developer.nvidia.com/cuda-downloads
+    
+    * Cuda installation instructions
+
+        ``` sudo sh cuda_10.0.130_410.48_linux.run ```
+    
+    * Set up the development environment
+    
+        ``` sudo vim ~/.bashrc ```
+
+        ``` export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}```
+        
+        ``` export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}} ```
+        
+        ``` source ~/.bashrc ```
+        
+    * Test if CUDA is successfully installed, run:
+    
+        ``` nvcc -V ```
+
+        If there are some troubles, remove CUDA, and run the installer:
+        
+        ``` cd /usr/local/cuda/bin ```
+        
+        ``` sudo ./uninstall_cuda_10.0.pl ```
+        
+        ``` sudo ./NVIDIA-Linux-x86_64-410.78.run --no-opengl-libs ```
+
+* # cuDNN
+
+    * Version: cuDNN v7.4.1
+
+    * cuDNN link: https://developer.nvidia.com/rdp/cudnn-download
+    
+    * Unzip the cuDNN package
+        
+        ``` tar -xzvf cudnn-10.0-linux-x64-v7.4.1.5 ```
+        
+    * Copy the files into the CUDA Toolkit directory
+    
+        ``` sudo cp cuda/include/cudnn.h /usr/local/cuda/include ```
+        
+        ``` sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64 ```
+        
+        ``` sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn* ```
+
+
+
 ## Good Ref. [1] TensorFlow Tutorials
 
 [Original repository on GitHub](https://github.com/Hvass-Labs/TensorFlow-Tutorials)
